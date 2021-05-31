@@ -142,9 +142,16 @@ section{
 
 article img{
   font-size: 5vw;
-  height: 50vw;
-  width: 50vw;
+  height: 30vw;
+  width: 30vw;
   padding-top: 3%;
+}
+
+article ul li a{
+  text-decoration: none;
+  list-style: none;
+  font-size: 24px;
+  color: black;
 }
 
 article p{
