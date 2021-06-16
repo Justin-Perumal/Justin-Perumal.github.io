@@ -8,6 +8,12 @@ body {
 	margin: 0 auto;
 }
 
+.container img{
+float: left;
+height: 100px;
+margin: 10px;
+}
+
 header {
   background: black;
 }
@@ -18,15 +24,6 @@ header::after {
   clear: both;
 }
 
-.logo {
-  float: left;
-  padding-left: 20px;
-}
-
-.logo img{
-  height: 100px;
-}
-
 nav {
   float: right;
 }
@@ -35,7 +32,7 @@ nav ul {
   margin: 0;
   padding-bottom: 60px;
   padding-right: 30px;
-  display: flex;
+  display:inherit;
   list-style: none;
 }
 
@@ -60,7 +57,7 @@ nav ul li {
   background-color: gray;
   border-radius: 25px;
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 #Dropdown.li {
@@ -86,7 +83,7 @@ nav ul li {
   background-color: gray;
   border-radius: 25px;
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 #DropdownCharacter.li {
