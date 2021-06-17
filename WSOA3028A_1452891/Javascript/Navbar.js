@@ -8,6 +8,10 @@ var TheoryBlogPosts = [
     {title: "Norman Doors and Web Design?", date: new Date('2021/04/16'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG6/Blog 6.html'},
     {title: "Usability on the Internet!", date: new Date('2021/04/23'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG7/Blog 7.html'},
     {title: "The Digital Divide!", date: new Date('2021/04/30'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG8/Blog 8.html'},
+    {title: "Study of Information Geographies!", date: new Date('2021/05/24'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG9/Blog 9.html'},
+    {title: "Ethical Implementation of UX/UI", date: new Date('2021/05/31'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG10/Blog 10.html'},
+    {title: "Analysis of my own UX and UI", date: new Date('2021/06/07'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG11/Blog 11.html'},
+    {title: "Fama.io and its ethical issues", date: new Date('2021/06/14'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG12/Blog 12.html'},
 ]
 
 var CharacterBlogPosts = [
@@ -29,6 +33,11 @@ var NavItems = [
 const newNavBar = document.createElement('nav');
 const NavLocation = document.getElementById('NavLocation');
 const NewNavList = document.createElement('ul');
+const MobileMenu = document.createElement('img');
+
+MobileMenu.src = "/WSOA3028A_1452891/Menu.png";
+MobileMenu.alt = "Menu Button"
+MobileMenu.classList = "Menu";
 
 function CreateNav()
 {
@@ -59,6 +68,7 @@ function CreateNav()
     }
 
     newNavBar.appendChild(NewNavList);
+    newNavBar.appendChild(MobileMenu)
     NavLocation.appendChild(newNavBar);
 
 }

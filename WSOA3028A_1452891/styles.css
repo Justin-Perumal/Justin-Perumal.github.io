@@ -5,10 +5,11 @@ body {
 
 .container {
 	width: 80%;
+  display: flex;
 	margin: 0 auto;
 }
 
-.container img{
+.logo{
 float: left;
 height: 100px;
 margin: 10px;
@@ -16,12 +17,6 @@ margin: 10px;
 
 header {
   background: black;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
 }
 
 nav {
@@ -39,7 +34,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-top: 30px;
-  padding-left: 30px;
+  padding-left: 45px;
   padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -162,7 +157,7 @@ article p{
 }
 
 .About{
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   margin: 4vw;
   padding-right: 15%;
   padding-left: 15%;
@@ -174,7 +169,41 @@ article p{
 margin: 0;
 }
 
-.ToggleMenu{
+.Menu{
 float: right;
+height: 50px;
+width: 50px;
+display: none;
+}
 
+
+@media (max-width: 800px) {
+  nav ul {
+    margin: 0;
+    padding-bottom: 60px;
+    padding-right: 0px;
+    display:none;
+    list-style: none;
+  }
+
+  .Menu{
+    float: inline-end;
+    position:inherit;
+    flex: inherit;
+    padding: 40px;
+    display: inline-table;
+    margin-right: 20px;
+    margin-left: 280px;
+  }
+
+  #Dropdown{
+    display: none;
+  }
+  
+  #Dropdown.DropdownActive{
+    display:none;
+  } 
+  #Dropdown.DropdownInactive{
+    display: none;
+  }
 }
