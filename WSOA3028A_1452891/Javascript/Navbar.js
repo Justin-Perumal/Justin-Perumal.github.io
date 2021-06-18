@@ -33,11 +33,17 @@ var NavItems = [
 const newNavBar = document.createElement('nav');
 const NavLocation = document.getElementById('NavLocation');
 const NewNavList = document.createElement('ul');
-const MobileMenu = document.createElement('img');
 
-MobileMenu.src = "/WSOA3028A_1452891/Menu.png";
-MobileMenu.alt = "Menu Button"
-MobileMenu.classList = "Menu";
+const MobileMenu = document.createElement('input');
+const MenuLabel = document.createElement('label');
+const MenuImage = document.createElement('img');
+MobileMenu.type = "checkbox";
+MobileMenu.id = "Menu";
+MenuLabel.htmlFor ="Menu";
+MenuLabel.classList = "Menubtn";
+MenuImage.src="/WSOA3028A_1452891/Menu.png";
+MenuImage.alt="Menu icon";
+MenuLabel.appendChild(MenuImage);
 
 function CreateNav()
 {
@@ -68,7 +74,8 @@ function CreateNav()
     }
 
     newNavBar.appendChild(NewNavList);
-    newNavBar.appendChild(MobileMenu)
+    newNavBar.appendChild(MobileMenu);
+    newNavBar.appendChild(MenuLabel);
     NavLocation.appendChild(newNavBar);
 
 }
@@ -149,5 +156,6 @@ function CloseMenuCharacter()
     document.getElementById("DropdownCharacter").classList.remove("DropdownActive");
     document.getElementById("CharacterDropdown").classList.add("DropdownInactive");
 } 
+
 
 
