@@ -12,18 +12,19 @@ var TheoryBlogPosts = [
     {title: "Ethical Implementation of UX/UI", date: new Date('2021/05/31'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG10/Blog 10.html'},
     {title: "Analysis of my own UX and UI", date: new Date('2021/06/07'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG11/Blog 11.html'},
     {title: "Fama.io and its ethical issues", date: new Date('2021/06/14'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG12/Blog 12.html'},
+    {title: "Reflection on Implicit Bias test", date: new Date('2021/06/21'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG13/Blog 13.html'},
+    {title: "APIs and my implementation!", date: new Date('2021/06/28'), href: '/WSOA3028A_1452891/Blogs/Theory Blogs/BLOG14/Blog 14.html'},
 ]
 
 var CharacterBlogPosts = [
     {title: "Wireframes and Design", date: new Date('2021/03/26'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Wireframes and Design/Wireframes.html'},
     {title: "Character description and Rationale", date: new Date('2021/03/25'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Character Rationale/Rationale.html'},
     {title: "Website Style Guide", date: new Date('2021/05/22'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Website Style Guide/StyleGuide.html'},
-    {title: "Sous Vide", date: new Date('2021/04/12'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Blog 1/Character Blog 1.html'},
 ]
 
 var NavItems = [
     {item: 'Home', href: '/WSOA3028A_1452891/index.html'},
-    {item: 'Recipes', href: '/WSOA3028A_1452891/Recipes/RecipesMain.html'},
+    {item: 'Cooking', href: '/WSOA3028A_1452891/Cooking/CookingMain.html'},
     {item: 'Restaurants', href: '/WSOA3028A_1452891/Restaurants/RestaurantsMain.html'},
     {item: 'Theory Blogs', href: '/WSOA3028A_1452891/Blogs/Theory Blogs/TheoryBlogMain.html'},
     {item: 'Character Blogs', href: '/WSOA3028A_1452891/Blogs/Character Blogs/CharacterBlogsMain.html'},
@@ -35,15 +36,13 @@ const NavLocation = document.getElementById('NavLocation');
 const NewNavList = document.createElement('ul');
 
 const MobileMenu = document.createElement('input');
-const MenuLabel = document.createElement('label');
 const MenuImage = document.createElement('img');
-MobileMenu.type = "checkbox";
-MobileMenu.id = "Menu";
-MenuLabel.htmlFor ="Menu";
-MenuLabel.classList = "Menubtn";
-MenuImage.src="/WSOA3028A_1452891/Menu.png";
-MenuImage.alt="Menu icon";
-MenuLabel.appendChild(MenuImage);
+MobileMenu.type = "image";
+MobileMenu.src = "/WSOA3028A_1452891/Menu.png";
+MobileMenu.id = "MenuButton";
+MobileMenu.classList = "Menubtn";
+MobileMenu.alt="Hamburger menu icon";
+//MobileMenu.appendChild(MenuImage);
 
 function CreateNav()
 {
@@ -72,10 +71,9 @@ function CreateNav()
         console.log('adding item ' + NavItems[i].item);
         NewNavList.appendChild(NewNavItem);
     }
-
+    NewNavList.classList = "NavList";
     newNavBar.appendChild(NewNavList);
     newNavBar.appendChild(MobileMenu);
-    newNavBar.appendChild(MenuLabel);
     NavLocation.appendChild(newNavBar);
 
 }
@@ -157,5 +155,24 @@ function CloseMenuCharacter()
     document.getElementById("CharacterDropdown").classList.add("DropdownInactive");
 } 
 
+//Toggle for menu
 
+const ToggleButton = document.getElementById("MenuButton");
+const NavigationList = document.getElementsByClassName("NavList")[0];
 
+ToggleButton.addEventListener('click', MenuToggle)
+
+function MenuToggle()
+{
+    console.log("Menu toggled");
+    if(NavigationList.classList == "NavList")
+    {
+        NavigationList.classList.remove("NavList");
+        NavigationList.classList.add("NavListActive");
+    }
+    else if(NavigationList.classList == "NavListActive")
+    {
+        NavigationList.classList.remove("NavListActive");
+        NavigationList.classList.add("NavList");
+    }
+}

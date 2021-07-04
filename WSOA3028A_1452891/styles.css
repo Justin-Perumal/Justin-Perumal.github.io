@@ -1,13 +1,16 @@
+/* GENERAL PC STYLING */
 
 body {
   margin: 0;
 }
 
 .container {
-	width: 80%;
   display: flex;
-	margin: 0 auto;
-  background: black;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
 }
 
 .logo{
@@ -17,39 +20,42 @@ margin: 10px;
 }
 
 nav ul {
-  float: right;
-  margin: 0;
-  margin-right: 20px;
-  list-style: none;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin-top: 30px;
-  padding-left: 45px;
-  padding-right: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  cursor: pointer;
+   list-style: none;
+}
+
+nav ul li a:hover{
+  color: gray;
+  transition: all 0.4s ease;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1.75rem;
+    font-size: 2.25vh;
+    text-transform: uppercase;
 }
 
 #Dropdown{
-  font-size: 12px;
+  font-size: 10px;
   display: none;
   position: absolute;
-  width: 300%;
-  text-align: center;
+  width: 30%;
+  height: 75vh;
+  text-align: left;
   columns: 2;
   background-color: gray;
   border-radius: 25px;
   z-index: 1;
-  margin-top: 25px;
-}
-
-#Dropdown.li {
-  padding: 10px 15px;
-  color: white;
+  margin-top: 50px;
 }
 
 #Dropdown.DropdownActive{
@@ -61,21 +67,17 @@ nav ul li {
 }
 
 #DropdownCharacter{
-  font-size: 12px;
+  font-size: 10px;
   display: none;
   position: absolute;
-  width: 100%;
-  text-align: center;
+  width: 15%;
+  height: 40vh;
+  text-align: left;
   columns: 1;
   background-color: gray;
   border-radius: 25px;
   z-index: 1;
-  margin-top: 25px;
-}
-
-#DropdownCharacter.li {
-  padding: 10px 15px;
-  color: white;
+  margin-top: 50px;
 }
 
 #DropdownCharacter.DropdownActive{
@@ -87,27 +89,15 @@ nav ul li {
 }
 
 nav ul li ul li a{
-  font-size: 14px;
+  color: white;
+  font-size: 2vh;
   text-align: center;
-  padding: 0;
+  padding: 1rem;
 }
 
 nav ul li ul li a:hover{
   color: black;
 }
-
-nav ul li a:hover{
-  color: gray;
-  transition: all 0.4s ease;
-}
-
-nav ul li a{
-  color:white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
 body{
     margin: 0;
 }
@@ -116,6 +106,13 @@ section{
     padding: 10%;
     font-size: 3vh;
     padding-top: 3%;
+}
+
+#Map{
+  margin: 0 auto;
+  margin-bottom: 5%;
+  height: 75vh;
+  width: 70vw;
 }
 
 .Center{
@@ -133,9 +130,12 @@ article img{
 
 article ul li a{
   text-decoration: none;
-  list-style: none;
   font-size: 22px;
   color: black;
+}
+
+article ul li{
+  list-style: none;
 }
 
 article p{
@@ -143,13 +143,13 @@ article p{
 }
 
 .Blog{
-  font-size: 1.3vw;
+  font-size: 24px;
   padding-left: 15%;
   padding-right: 15%;
 }
 
 .About{
-  font-size: 16px;
+  font-size: 24px;
   margin: 4vw;
   padding-right: 15%;
   padding-left: 15%;
@@ -162,74 +162,113 @@ margin: 0;
 }
 
 .Menubtn{
-  font-size: 30px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  padding: auto;
+  right: 15px;
+  top: 45px;
+  display: none;
   float: right;
-  line-height: 80px;
-  margin-left: 550px;
-  cursor: pointer;
-  display: none;
+  justify-content: space-between;
 }
 
-.Menubtn img{
-  height: 40px;
-  width: 40px;
-  margin-top: 30px;
-}
+/* FOR TABLETS --> IPad etc */
 
-#Menu{
-  display: none;
-}
-
-@media (max-width: 960px) {
-  .Menubtn{
-    display: block;
-}
-  ul{
-    position: fixed;
-    width: 75.6%;
-    height: 100vh;
-    background: black;
-    top: 120px;
-    left: 10%;
-    text-align: center;
-    transition: all 0.5s;
-}
-  nav ul li{
-    display: inline-block;
-    margin: 15px 0;
-    line-height: 30px;
-}
+@media (max-width: 1040px){
   nav ul li a{
-    font-size: 20px;
-    margin: 200px;
+    padding: 1.5rem;
+    font-size: 1.5vh;
+    text-transform: uppercase;
   }
 
-  #Menu:checked ~ ul{
-    display: none;
-}
+  .Blog
+  {
+    font-size: 22px;
+  }
 
-  #Dropdown{
-    display: none;
+  #DropdownCharacter.DropdownActive{
+    display:none;
   }
   
+  #DropdownCharacter.DropdownInactive{
+    display: none;
+  }
+
   #Dropdown.DropdownActive{
     display:none;
-  } 
+  }
+  
   #Dropdown.DropdownInactive{
     display: none;
   }
 }
 
-@media (max-width: 1200px){
-  nav ul li a{
-    color:white;
-    font-size: 10px;
+/* FOR MOBILE DEVICES --> Samsung Galaxy S5; IPhone X */
+
+@media (max-width: 810px){
+  .Menubtn {
+    display: flex;
   }
-  nav ul li {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    position: relative;
-    cursor: pointer;
+
+  nav ul{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .NavList li{
+    display: none;
+    width: 100%;
+    text-align: center;
+    left: 400px;
+  }
+
+  nav ul li a{
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  .container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .NavListActive li{
+    display: absolute;
+    width: 100%;
+    text-align: center;
+    left: 400px;
+  }
+
+  .Blog
+  {
+    margin: 0;
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .Center img{
+    height: 60vw;
+    width: 60vw;
+  }
+
+  #DropdownCharacter.DropdownActive{
+    display:none;
+  }
+  
+  #DropdownCharacter.DropdownInactive{
+    display: none;
+  }
+
+  #Dropdown.DropdownActive{
+    display:none;
+  }
+  
+  #Dropdown.DropdownInactive{
+    display: none;
   }
 }
