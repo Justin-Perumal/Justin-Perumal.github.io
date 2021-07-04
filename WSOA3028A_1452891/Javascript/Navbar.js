@@ -20,6 +20,7 @@ var CharacterBlogPosts = [
     {title: "Wireframes and Design", date: new Date('2021/03/26'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Wireframes and Design/Wireframes.html'},
     {title: "Character description and Rationale", date: new Date('2021/03/25'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Character Rationale/Rationale.html'},
     {title: "Website Style Guide", date: new Date('2021/05/22'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Website Style Guide/StyleGuide.html'},
+    {title: "Updated Wireframes", date: new Date('2021/06/04'), href: '/WSOA3028A_1452891/Blogs/Character Blogs/Updated Wireframes/Updated Wireframes.html'},
 ]
 
 var NavItems = [
